@@ -88,6 +88,14 @@ EXTERNAL_LINKS = [
     ('//linktopage', {'de': 'titel', 'en': 'title'})
 ]
 
+#sidebar social widget
+SOCIAL = [
+    ('theme/img/icons/facebook.png', '//facebook'),
+    ('theme/img/icons/googleplus.png', '//gplus'),
+    ('theme/img/icons/twitter.png', '//twitter')
+]
+ADD_RSS = True
+
 # setting the mail address of the newsletter
 MAILINGLIST = 'announce@ieee.students.uni-passau.de'
 
