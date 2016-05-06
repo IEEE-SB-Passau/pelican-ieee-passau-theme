@@ -1,5 +1,5 @@
 {% set counter = 0 %}
-{% for article in articles_page.object_list %}
+{% for article in articles_page.object_list if article | shouldArticleBeDisplayed %}
 {% if counter == SPONSOR_WIDGET_PLACE %}
 <div id="text_icl-5" class="widget widget_text_icl inline-sponsors"><h4 class="widgettitle">{% trans %}trans_thank_sponsors{% endtrans %}</h4>
     <div class="textwidget">

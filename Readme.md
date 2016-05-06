@@ -59,11 +59,23 @@ def removeLanguagePrefix(path):
     else:
         return path
 
+def shouldArticleBeDisplayed(article):
+    if hasattr(article, 'event-start'):
+        evStart = datetime.strptime(getattr(article, 'event-start'), '%Y-%m-%d %H:%M')
+
+        if (not SHOW_PAST_EVENTS_IN_BLOG and evStart < datetime.now())\
+                or (evStart > datetime.now() and evStart-datetime.now() > SHOW_FUTURE_EVENTS_IN_BLOG_UNTIL):
+            return False
+
+    return True
+
+
 JINJA_FILTERS = {
         'getOtherLanguage': getOtherLanguage,
         'getCurrentLanguage': getCurrentLanguage,
         'toMonthNum': toMonthNum,
-        'removeLanguagePrefix': removeLanguagePrefix
+        'removeLanguagePrefix': removeLanguagePrefix,
+        'shouldArticleBeDisplayed': shouldArticleBeDisplayed
         }
 ```
 
@@ -97,6 +109,10 @@ SPONSORS_PAGE = 'pages/sponsors'
 FOOTER_LINK_IMPRINT = '//imprint'
 FOOTER_LINK_ORGANISATION = '//organisation'
 FOOTER_ORGANISATION_NAME = 'Name'
+
+# customization of events in timeline
+SHOW_PAST_EVENTS_IN_BLOG = False
+SHOW_FUTURE_EVENTS_IN_BLOG_UNTIL = timedelta(weeks=4)
 ```
 
 For a working configuration you can look [here](https://github.com/stieglma/pelican-ieee-passau/blob/master/pelicanconf.py).
