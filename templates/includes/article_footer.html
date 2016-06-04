@@ -25,9 +25,10 @@
 				<div class="tags last">
 					<span class="tags-title">{% trans %}trans_tags{% endtrans %}:</span>
 						<span class="the-tags">
-						{% for tag in article.tags %}
-						    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>,
-						{% endfor %}
+						{% set spacecomma = joiner(", ") %}
+						{% for tag in article.tags -%}
+						{{ spacecomma() }}<a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+						{%- endfor %}
 						</span>
 				 </div>
 			 <div>
