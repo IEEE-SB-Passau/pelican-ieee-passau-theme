@@ -1945,7 +1945,28 @@ you can add resource intensive styles.
     float: left;
     /*height: 54px;*/
   }
+  
+  #content .hentry footer .event-location {
+	  margin-left: 5px;
+	  flex-basis: 50%;
+  }
+  
+  #content .hentry footer .event-date {
+	  flex-basis: 50%;
 
+  }
+
+  #content .hentry footer .event-footer {
+	display: flex;
+	padding:0;
+	background-color: rgba(0, 0, 0, 0);	
+  }
+  
+  #content .hentry footer .tag-footer {
+	display: flex;
+	padding:0;
+	background-color: rgba(0, 0, 0, 0);	
+  }
   /*********************
   SIDEBARS & ASIDES
   *********************/
