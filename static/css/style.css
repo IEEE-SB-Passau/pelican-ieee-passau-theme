@@ -1941,15 +1941,9 @@ you can add resource intensive styles.
   *********************/
   /* line 186, ../scss/_768up.scss */
   #content .hentry footer .tags {
-    width: 49.8%;
-    float: right;
-    height: 54px;
-  }
-  /* line 192, ../scss/_768up.scss */
-  #content .hentry footer .categories {
-    width: 49.8%;
+    width: 100%;
     float: left;
-    height: 54px;
+    /*height: 54px;*/
   }
 
   /*********************
