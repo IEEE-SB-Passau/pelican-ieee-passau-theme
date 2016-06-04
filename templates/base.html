@@ -96,6 +96,16 @@
                         </li>
                         {% endif %}
                         {% endfor %}
+
+                        {# add verbose tags #}
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><span style="display:block; font-size: 1.2em; font-weight:bold; padding:.5em .75em;border-left:none;border-bottom:none">{{ VERBOSE_TAG_HEAD[SITEURL | getCurrentLanguage] }}</span>
+                            <ul class="sub-menu">
+                                {% for tag in VERBOSE_TAGS %}
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ SITEURL }}/tag/{{ tag }}.html">{{ tag }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+
                         {% if EXTERNAL_LINKS %}
                             {% for link, name in EXTERNAL_LINKS %}
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ link }}">{{ name[ SITEURL | getCurrentLanguage] }}</a></li>

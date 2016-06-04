@@ -2356,3 +2356,8 @@ of the styles inside media queries.
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;         /* Opera/IE 8+ */
 }
+
+.page-posts {
+  box-sizing: border-box;
+  margin: 10px;
+}

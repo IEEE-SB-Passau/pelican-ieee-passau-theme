@@ -9,5 +9,26 @@
 {% endblock headerPicture %}
 
 {% block content %}
-{% include 'includes/paginated_content.html' %}
+{% if tag in VERBOSE_TAGS %}
+<!-- begin page -->
+<article class="clearfix page type-page status-publish hentry" role="article" itemscope itemtype="https://schema.org/BlogPosting">
+    <header class="article-header">
+        <h1 class="page-title" itemprop="headline">{{ tag }}</h1>
+    </header> <!-- end article header -->
+
+    <section class="entry-content clearfix" itemprop="articleBody">
+        {{ VERBOSE_TAGS[tag][SITEURL | getCurrentLanguage] }}
+    </section> <!-- end article section -->
+
+    <div class="page-posts">
+    {% include 'includes/paginated_content.html' %}
+    </div>
+    <footer class="article-footer">
+    </footer> <!-- end page footer -->
+
+</article>
+
+{% else %}
+{% include 'includes/paginated_content.html' %}{
+{% endif %}
 {% endblock content %}
