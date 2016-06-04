@@ -7,7 +7,13 @@
                 <div id="em_widget-2" class="widget widget_em_widget">
                   <ul>{% for evstart, evend, event in events_list[DEFAULT_LANG]|reverse %}
                       <li><h3><a href="{{ SITEURL }}/blog/{{ event.slug }}" title="{{ event['title'] }}">{{ event['title'] }}</a></h3>
-                      <span class="date dashicons dashicons-calendar"> {{ evstart }}</span>
+			      <span class="date dashicons dashicons-calendar">  
+				      {% if DEFAULT_LANG == "de" %} 
+	    				      {{ evstart.strftime('%d.%m.%Y %H:%M') }}
+				      {% else %} 
+					      {{ evstart.strftime('%Y-%m-%d %H:%M') }}
+				      {% endif %} 
+				      </span>
                       <span class="location dashicons dashicons-location">  {{ event.location }}</span>
                       </li>
                       {% endfor %}
