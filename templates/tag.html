@@ -9,7 +9,7 @@
 {% endblock headerPicture %}
 
 {% block content %}
-{% if tag in VERBOSE_TAGS %}
+{% if tag|capitalize in VERBOSE_TAGS %}
 <!-- begin page -->
 <article class="clearfix page type-page status-publish hentry" role="article" itemscope itemtype="https://schema.org/BlogPosting">
     <header class="article-header">
@@ -17,7 +17,7 @@
     </header> <!-- end article header -->
 
     <section class="entry-content clearfix" itemprop="articleBody">
-        {{ VERBOSE_TAGS[tag][SITEURL | getCurrentLanguage] }}
+        {{ VERBOSE_TAGS[tag|capitalize][SITEURL | getCurrentLanguage] }}
     </section> <!-- end article section -->
 
     <div class="page-posts">
