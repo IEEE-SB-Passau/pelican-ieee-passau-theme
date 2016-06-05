@@ -1179,7 +1179,7 @@ POSTS & CONTENT STYLES
 #content .hentry footer div {
   background-color: rgba(0, 0, 0, 0.15);
   padding: 0.2em 1em;
-  margin-top: 0.2em;
+  margin-top: 1px;
 }
 /* line 446, ../scss/_base.scss */
 #content .hentry footer div .tags-title, #content .hentry footer div .categories-title {
@@ -1947,7 +1947,7 @@ you can add resource intensive styles.
   }
   
   #content .hentry footer .event-location {
-	  margin-left: 5px;
+	  margin-left: 3px;
 	  flex-basis: 50%;
   }
   
