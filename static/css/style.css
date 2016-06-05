@@ -1793,12 +1793,12 @@ you can add resource intensive styles.
   }
 
   /* line 44, ../scss/_grid.scss */
-  .first {
+  .grid_first {
     margin-left: 0;
   }
 
   /* line 48, ../scss/_grid.scss */
-  .last {
+  .grid_last {
     float: right;
   }
 

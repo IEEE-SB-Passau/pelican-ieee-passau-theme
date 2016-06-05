@@ -1,6 +1,6 @@
 
             <!-- begin sidebar -->
-            <div id="sidebar1" class="sidebar threecol last clearfix" role="complementary">
+            <div id="sidebar1" class="sidebar threecol grid_last clearfix" role="complementary">
 
                 {% if events_list %}
                 <!-- events -->
@@ -59,7 +59,7 @@
                     {% set firstCol = {'foo': True} %}
                     {% for image, url in SOCIAL %}
                         {% if firstCol['foo'] %}
-                    <div class="widget widget_flatdesign_social-media-widget sixcol clearfix first">
+                    <div class="widget widget_flatdesign_social-media-widget sixcol clearfix grid_first">
                         {% else %}
                     <div class="widget widget_flatdesign_social-media-widget sixcol clearfix">
                         {% endif %}
@@ -71,7 +71,7 @@
                     {# add RSS to social widget if necessary #}
                     {% if ADD_RSS %}
                         {% if firstCol['foo'] %}
-                    <div class="widget widget_flatdesign_social-media-widget sixcol clearfix first">
+                    <div class="widget widget_flatdesign_social-media-widget sixcol clearfix grid_first">
                         {% else %}
                     <div class="widget widget_flatdesign_social-media-widget sixcol clearfix">
                         {% endif %}
