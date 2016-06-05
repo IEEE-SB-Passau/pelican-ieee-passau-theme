@@ -17,7 +17,11 @@
                       <span class="location dashicons dashicons-location">  {{ event.location }}</span>
                       </li>
                       {% endfor %}
-                  </ul>
+                  </ul> 
+		  <hr style="border: 0; height: 1px; border-top: 1px solid white;">
+		  <div> 
+			  <a href="{{ SITEURL }}/{{ PLUGIN_EVENTS["ics_fname"] }}" class="em_widget_link"><span class="dashicons dashicons-rss"></span>&nbsp;{% trans %}trans_ical_subscribe{% endtrans %}</a>
+		  </div>
                 </div>
                 {% endif %}
 

@@ -63,3 +63,6 @@ msgstr "Search"
 msgid "trans_show_menu"
 msgstr "Show Menu"
 
+msgid "trans_ical_subscribe"
+msgstr "Subscribe (ical)"
+

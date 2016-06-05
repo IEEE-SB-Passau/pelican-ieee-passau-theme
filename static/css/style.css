@@ -2315,6 +2315,11 @@ of the styles inside media queries.
     letter-spacing:-0.05em;
 }
 
+.em_widget_link {
+    text-decoration: none;
+    font-size: 1em !important;
+}
+
 .widget.widget_em_widget span.location {
     margin: -.1em 1em 0 0;
 }
