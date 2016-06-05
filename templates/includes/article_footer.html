@@ -21,9 +21,10 @@
 			
 			</div>
 			{% endif %}
+			{% if article.tags %}
 			<div class="tag-footer">	
 				<div class="tags last">
-					<span class="tags-title">{% trans %}trans_tags{% endtrans %}:</span>
+					<span class="tags-title dashicons dashicons-tag"></span>
 						<span class="the-tags">
 						{% set spacecomma = joiner(", ") %}
 						{% for tag in article.tags -%}
@@ -32,5 +33,6 @@
 						</span>
 				 </div>
 			 </div>
+			 {% endif %}
                    </footer>
                 <!-- end article footer -->
