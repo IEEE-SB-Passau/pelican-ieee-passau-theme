@@ -27,12 +27,12 @@
     <!-- stylesheets and fonts -->
     <link rel='stylesheet' id='open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
     {% assets filters="cssmin", output="css/style.min.css", "css/style.css", "css/dashicons.css", "css/magnific-popup.css" %}
-    <link rel='stylesheet' href='{{ main_siteurl }}/{{ ASSET_URL | removeLanguagePrefix}}' type='text/css' media='all' />
+    <link rel='stylesheet' href='{{ main_siteurl }}/{{ ASSET_URL}}' type='text/css' media='all' />
     {% endassets %} 
 
     <!-- provide correct languages for search engines -->
     <link rel="alternate" hreflang="en-US" href="{{ main_siteurl }}/en/" />
-    <link rel="alternate" hreflang="de-DE" href="{{ main_siteurl }}/de/" />
+    <link rel="alternate" hreflang="de-DE" href="{{ main_siteurl }}" />
 
     {% if FEED_ALL_ATOM %}
     <link href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
@@ -98,7 +98,7 @@
                         {% endfor %}
 
                         {# add verbose tags #}
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><span style="display:block; font-size: 1.2em; font-weight:bold; padding:.5em .75em;border-left:none;border-bottom:none">{{ VERBOSE_TAG_HEAD[SITEURL | getCurrentLanguage] }}</span>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><span style="display:block; font-size: 1.2em; font-weight:bold; padding:.5em .75em;border-left:none;border-bottom:none">{{ VERBOSE_TAG_HEAD[DEFAULT_LANG] }}</span>
                             <ul class="sub-menu">
                                 {% for tag in VERBOSE_TAGS %}
                                 <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ SITEURL }}/tag/{{ tag|lower }}.html">{{ tag }}</a></li>
@@ -108,7 +108,7 @@
 
                         {% if EXTERNAL_LINKS %}
                             {% for link, name in EXTERNAL_LINKS %}
-                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ link }}">{{ name[ SITEURL | getCurrentLanguage] }}</a></li>
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ link }}">{{ name[DEFAULT_LANG] }}</a></li>
                             {% endfor %}
                         {% endif %}
                         <li id="menu-search" class="menu-item menu-item-type-search menu-search"><form class="navbar-search" action="{{ main_siteurl }}/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="{% trans %}trans_search{% endtrans %}" name="q" id="tipue_search_input"></form></li>
@@ -138,7 +138,7 @@
 
     <!-- scripts (no more other content)-->
     {% assets filters="jsmin", output="js/packed.js", "js/jquery.min.js", "js/jquery.magnific-popup.min.js" %}
-    <script src="{{ main_siteurl }}/{{ ASSET_URL | removeLanguagePrefix}}"></script>
+    <script src="{{ main_siteurl }}/{{ ASSET_URL }}"></script>
     {% endassets %}
 
     <script>

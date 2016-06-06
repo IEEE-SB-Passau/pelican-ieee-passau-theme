@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block languageChoser %}
-<a class="lang-link" href="{{ main_siteurl }}/{{ SITEURL | getOtherLanguage }}/tag/{{ tag|lower }}.html" title="View translated page"></a>
+<a class="lang-link" href="{{ extra_siteurls.values() | first() }}/{{page_name}}{{ articles_page.number if articles_page.number != 1 }}.html" title="View translated page"></a>
 {% endblock languageChoser %}
 
 {% block headerPicture %}
@@ -17,7 +17,7 @@
     </header> <!-- end article header -->
 
     <section class="entry-content clearfix" itemprop="articleBody">
-        {{ VERBOSE_TAGS[tag|capitalize][SITEURL | getCurrentLanguage] }}
+        {{ VERBOSE_TAGS[tag|capitalize][DEFAULT_LANG] }}
     </section> <!-- end article section -->
 
     <div class="page-posts">

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block languageChoser %}
-<a class="lang-link" href="{{ main_siteurl }}/{{ SITEURL | getOtherLanguage }}" title="View translated page"></a>
+<a class="lang-link" href="{{ extra_siteurls.values() | first() }}" title="View translated page"></a>
 {% endblock languageChoser %}
 
 {% block headerPicture %}
