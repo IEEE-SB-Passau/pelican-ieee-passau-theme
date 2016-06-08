@@ -6,9 +6,9 @@
 
 {% block headerPicture %}
 {% if page.illustration %}
-<img width="1140" height="300" class="header-image attachment-flatdesign_header_image wp-post-image" src="{{ main_siteurl }}/{{ page.illustration }}"  />
+<img width="1140" height="300" class="header-image attachment-flatdesign_header_image wp-post-image image-process-header-image" src="{{ main_siteurl }}/{{ page.illustration }}"  />
 {% else %}
-<img width="1140" height="300" class="header-image attachment-flatdesign_header_image wp-post-image" src="{{ main_siteurl }}/{{ DEFAULT_PAGE_HEADER }}"  />
+<img width="1140" height="300" class="header-image attachment-flatdesign_header_image wp-post-image image-process-header-image" src="{{ main_siteurl }}/{{ DEFAULT_PAGE_HEADER }}"  />
 {% endif %}
 {% endblock headerPicture %}
 

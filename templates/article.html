@@ -6,9 +6,9 @@
 
 {% block headerPicture %}
 {% if article.illustration %}
-                            <img width="1140" height="300" class="header-image attachment-flatdesign_header_image wp-post-image" src="{{ main_siteurl }}/{{ article.illustration }}"  />
+                            <img width="1140" height="300" class="header-image attachment-flatdesign_header_image wp-post-image image-process-header-image" src="{{ main_siteurl }}/{{ article.illustration }}"  />
 {% else %}
-                            <img width="1140" height="300" class="header-image attachment-flatdesign_header_image wp-post-image" src="{{ main_siteurl }}/{{ DEFAULT_ARTICLE_HEADER }}"  />
+                            <img width="1140" height="300" class="header-image attachment-flatdesign_header_image wp-post-image image-process-header-image" src="{{ main_siteurl }}/{{ DEFAULT_ARTICLE_HEADER }}"  />
 {% endif %}
 {% endblock headerPicture %}
 
