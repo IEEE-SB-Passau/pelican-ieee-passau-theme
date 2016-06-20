@@ -5,8 +5,8 @@
                 {% if events_list %}
                 <!-- events -->
                 <div id="em_widget-2" class="widget widget_em_widget">
-                  <ul>{% for evstart, evend, event in events_list[DEFAULT_LANG]|reverse if event|isEventInSidebar() %}
-                      <li><h3><a href="{{ SITEURL }}/blog/{{ event.slug }}" title="{{ event['title'] }}">{{ event['title'] }}</a></h3>
+                  <ul>{% for evstart, evend, event, article in events_list[DEFAULT_LANG]|reverse if article|isEventInSidebar() %}
+                      <li><h3><a href="{{ article.url }}" title="{{ event['title'] }}">{{ event['title'] }}</a></h3>
 			      <span class="date dashicons dashicons-calendar">  
 				      {% if DEFAULT_LANG == "de" %} 
 	    				      {{ evstart.strftime('%d.%m.%Y %H:%M') }}

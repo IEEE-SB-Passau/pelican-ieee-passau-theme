@@ -5,13 +5,13 @@
 			    <div class="event-date">
 				    <span class="date dashicons dashicons-calendar"></span>
 				      {% if DEFAULT_LANG == "de" %} 
-	    				      {{ article.metadata["event-start-date"].strftime('%d.%m.%Y %H:%M') }}
+	    				      {{ article.event_start.strftime('%d.%m.%Y %H:%M') }}
 					      -
-	    				      {{ article.metadata["event-end-date"].strftime('%d.%m.%Y %H:%M') }}
+	    				      {{ article.event_end.strftime('%d.%m.%Y %H:%M') }}
 				      {% else %} 
-					      {{ article.metadata["event-start-date"].strftime('%Y-%m-%d %H:%M') }}
+					      {{ article.event_start.strftime('%Y-%m-%d %H:%M') }}
 					      -
-					      {{ article.metadata["event-end-date"].strftime('%Y-%m-%d %H:%M') }}
+					      {{ article.event_end.strftime('%Y-%m-%d %H:%M') }}
 				      {% endif %}
 			    </div>
 			    <div class="event-location">
