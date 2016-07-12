@@ -68,3 +68,6 @@ msgstr "Zeige Menü"
 msgid "trans_ical_subscribe"
 msgstr "Abonnieren (ical)"
 
+msgid "trans_sidebar_no_events"
+msgstr "Keine Veranstaltungen"
+

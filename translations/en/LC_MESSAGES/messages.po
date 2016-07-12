@@ -66,3 +66,6 @@ msgstr "Show Menu"
 msgid "trans_ical_subscribe"
 msgstr "Subscribe (ical)"
 
+msgid "trans_sidebar_no_events"
+msgstr "No future events at the moment"
+

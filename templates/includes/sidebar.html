@@ -2,7 +2,7 @@
             <!-- begin sidebar -->
             <div id="sidebar1" class="sidebar threecol grid_last clearfix" role="complementary">
 
-                {% if events_list %}
+                {% if events_list and events_list[DEFAULT_LANG] %}
                 <!-- events -->
                 <div id="em_widget-2" class="widget widget_em_widget">
                   <ul>{% for evstart, evend, event, article in events_list[DEFAULT_LANG]|reverse if article|isEventInSidebar() %}
@@ -16,7 +16,11 @@
 				      </span>
                       <span class="location dashicons dashicons-location">  {{ event.location }}</span>
                       </li>
+
+		      {% else %}
+		          {% trans %}trans_sidebar_no_events{%endtrans%}
                       {% endfor %}
+
                   </ul> 
 		  <hr style="border: 0; height: 1px; border-top: 1px solid white;">
 		  <div> 
