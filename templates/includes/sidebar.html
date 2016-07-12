@@ -33,6 +33,7 @@
                 <!-- newsletter subscription -->
                 <div id="mailman_subscribe-2" class="widget Mailman_Subscribe">
                     <h4 class="widgettitle">{% trans %}trans_newsletter_signup{% endtrans %}</h4>
+		    <!--
                     <?php
                         if (isset($_REQUEST['mailman_subscribe_email'])
                             && filter_var($_REQUEST['mailman_subscribe_email'], FILTER_VALIDATE_EMAIL)) {
@@ -51,6 +52,12 @@
                     <form class="mailman_subscribe_widget" action="{{ SITEURL }}" id="mailman_subscribe_form" method="post">
                         <input type="text" name="mailman_subscribe_email" placeholder="{% trans %} trans_newsletter_mail_placeholder {% endtrans %}" />
                         <input type="submit" name="absenden" value="absenden" />
+                    </form>
+		    -->
+                    <form class="mailman_subscribe_widget" action="mailto:{{ MAILINGLIST }}" id="mailman_subscribe_form" method="GET" enctype="text/plain">
+			<input name="subject" type="hidden" value="subscribe"/>
+			<input name="body" type="hidden" value="Send this mail from the address you want to receive the newsletter, wait for the confirmation mail and reply to it."/>
+			<input type="submit" name="absenden" value="{% trans %}trans_mailing_submit_button{% endtrans %}" />
                     </form>
                 </div>
                 {% endif %}

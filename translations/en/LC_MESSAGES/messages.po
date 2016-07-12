@@ -69,3 +69,6 @@ msgstr "Subscribe (ical)"
 msgid "trans_sidebar_no_events"
 msgstr "No future events at the moment"
 
+msgid "trans_mailing_submit_button"
+msgstr "Subscribe"
+

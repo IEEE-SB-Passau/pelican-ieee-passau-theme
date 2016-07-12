@@ -71,3 +71,6 @@ msgstr "Abonnieren (ical)"
 msgid "trans_sidebar_no_events"
 msgstr "Keine Veranstaltungen"
 
+msgid "trans_mailing_submit_button"
+msgstr "Abonieren"
+
