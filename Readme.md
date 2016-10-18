@@ -104,9 +104,9 @@ SPONSOR_WIDGET_PLACE = 2
 
 # header picture settings
 LOGO = 'header/ieee-logo.svg'
-HEADER_PICTURE = 'header/branch_header.jpg'
-DEFAULT_ARTICLE_HEADER = 'header/branch_header.jpg'
-DEFAULT_PAGE_HEADER = 'header/branch_header.jpg'
+HEADER_PICTURE = 'header/branch_header.png'
+DEFAULT_ARTICLE_HEADER = 'header/branch_header.png'
+DEFAULT_PAGE_HEADER = 'header/branch_header.png'
 
 # sponsors settings
 SPONSORS_PICTURE_FOLDER = 'sponsors'
