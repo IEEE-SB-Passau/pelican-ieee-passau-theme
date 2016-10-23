@@ -101,7 +101,7 @@
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><span style="display:block; font-size: 1.2em; font-weight:bold; padding:.5em .75em;border-left:none;border-bottom:none">{{ VERBOSE_TAG_HEAD[DEFAULT_LANG] }}</span>
                             <ul class="sub-menu">
                                 {% for tag in VERBOSE_TAGS %}
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ SITEURL }}/tag/{{ tag|lower }}.html">{{ tag }}</a></li>
+                                <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ SITEURL }}/tag/{{ tag|lower }}.html">{{ VERBOSE_TAG_NAMES[tag][DEFAULT_LANG] }}</a></li>
                                 {% endfor %}
                             </ul>
                         </li>
