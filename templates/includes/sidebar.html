@@ -6,7 +6,7 @@
                 <!-- events -->
                 <div id="em_widget-2" class="widget widget_em_widget">
                   <ul>{% for evstart, evend, event, article in events_list[DEFAULT_LANG]|reverse if article|isEventInSidebar() %}
-			  <li><h3><a href="{{SITEURL}}/{{ article.url }}" title="{{ event['title'] }}">{{ event['title'] }}</a></h3>
+			  <li><h3><a href="{{SITEURL}}/{{ ARTICLE_URL.format(slug=article.slug) }}" title="{{ event['title'] }}">{{ event['title'] }}</a></h3>
 			      <span class="date dashicons dashicons-calendar">  
 				      {% if DEFAULT_LANG == "de" %} 
 	    				      {{ evstart.strftime('%d.%m.%Y %H:%M') }}
