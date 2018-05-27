@@ -101,7 +101,16 @@
                                 {% endfor %}
                             </ul>
                         </li>
-
+                        
+                        {% if INTERNAL_LINKS %}
+                        <li class="menu-item menu-item-type-post_type menu-item-object-page"><span style="display:block; font-size: 1.2em; font-weight:bold; padding:.5em .75em;border-left:none;border-bottom:none">{{ INTERNAL_LINKS_TITLE[DEFAULT_LANG] }}</span>
+                            <ul class="sub-menu">
+                                {% for link, name in INTERNAL_LINKS %}
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ link }}">{{ name[DEFAULT_LANG] }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                        
                         {% if EXTERNAL_LINKS %}
                             {% for link, name in EXTERNAL_LINKS %}
                         <li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{ link }}">{{ name[DEFAULT_LANG] }}</a></li>
