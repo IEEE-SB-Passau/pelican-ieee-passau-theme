@@ -1219,6 +1219,9 @@ POSTS & CONTENT STYLES
   margin-left: 1.4rem;
   list-style-type: decimal;
 }
+#content .entry-content ol.loweralpha {
+  list-style-type: lower-alpha;
+}
 /* line 517, ../scss/_base.scss */
 #content .entry-content blockquote {
   font-style: italic;
