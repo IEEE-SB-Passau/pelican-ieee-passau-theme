@@ -15,8 +15,8 @@
             <div id="footer-links" class="threecol grid_last">
                 <nav role="navigation">
                     <ul id="menu-footer-de" class="nav footer-nav clearfix">
-                        <li id="menu-item-135" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135"><a href="{{ FOOTER_LINK_ORGANISATION }}">{{ FOOTER_ORGANISATION_NAME }}</a></li>
-                        <li id="menu-item-136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136"><a href="{{ FOOTER_LINK_IMPRINT }}">{% trans %}trans_imprint{% endtrans %}</a></li>
+                        <li id="menu-item-135" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-135"><a href="{{ FOOTER_ORGANISATION['link'][DEFAULT_LANG] }}">{{ FOOTER_ORGANISATION['name'][DEFAULT_LANG] }}</a></li>
+                        <li id="menu-item-136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136"><a href="{{ SITEURL }}/{{ FOOTER_LINK_IMPRINT }}">{% trans %}trans_imprint{% endtrans %}</a></li>
                     </ul>
                 </nav>
             </div> <!-- end #footer-links -->

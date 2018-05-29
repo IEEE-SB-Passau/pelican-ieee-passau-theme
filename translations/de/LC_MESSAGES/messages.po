@@ -32,7 +32,7 @@ msgstr "Wir danken unseren Sponsoren"
 
 #: templates/footer.html:19
 msgid "trans_imprint"
-msgstr "Impressum"
+msgstr "Impressum und Datenschutzerklärung"
 
 #: templates/index.html:60
 msgid "trans_paginator"
