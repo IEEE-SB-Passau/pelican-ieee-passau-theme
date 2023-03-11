@@ -123,4 +123,4 @@ SHOW_PAST_EVENTS_IN_BLOG = False
 SHOW_FUTURE_EVENTS_IN_BLOG_UNTIL = timedelta(weeks=4)
 ```
 
-For a working configuration you can look [here](https://github.com/stieglma/pelican-ieee-passau/blob/master/pelicanconf.py).
+For a working configuration you can look [here](pelicanconf.py).
