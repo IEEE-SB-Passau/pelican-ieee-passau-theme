@@ -3,7 +3,7 @@ This is a [Pelican](http://getpelican.org) template. Initially this design was c
 
 It features multi-language usage, a calendar, filled by events, fully searchable content (javascript-based), a mailman-newsletter signup form, submenus for static pages and diverse small additions that were necessary for us.
 
-![alt tag](https://raw.githubusercontent.com/stieglma/pelican-ieee-passau-theme/master/ieee_passau_design.png)
+![theme preview](ieee_passau_design.png)
 
 ### Setup
 This theme uses several plugins, disabling them may work but was up to now not tested.
